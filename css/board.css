@@ -1,0 +1,21 @@
+@import url("https://yudukiak.github.io/ccfoliaCSS/CSS/board.css");
+
+/* モーダル削除 */
+[role="presentation"]{display:block !important;    /*非表示解除*/}
+/* 音量 */
+div[tabindex="0"]>div:nth-child(3){
+    display:block !important;    /*非表示解除*/
+    position: fixed !important;  /* 今の位置を基準 */
+    top: 0px !important;         /* 上から0px */ 
+}
+
+/* ポップアップ */
+[role="tooltip"] * {
+max-width: 600px !important;
+min-width: 20px !important;
+}
+
+/*ボタン*/
+.css-1t4fimq .MuiButtonBase-root {
+    display:block !important;    /*非表示解除*/
+}
