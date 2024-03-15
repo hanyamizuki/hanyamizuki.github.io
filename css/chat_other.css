@@ -1,5 +1,4 @@
-@import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/main.css");
-@import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/option_name.css");
+@import url("https://hanyamizuki.github.io/css/chat.css");
 
 :root {
   --background-padding: 0;
@@ -9,103 +8,6 @@
   --width:     ;
 }
 
-
-/**************************
-　表示用CSS
-.MuiList-root>div:nth-child(1)>div>div>div:nth-last-child(-n+1) {
-    display: block !important;
-}
-**************************/
-/**************************
-　各種調整
-**************************/
-/* OBS */
-body {
-  background-color: rgba(0, 0, 0, 0);
-  margin: 0px auto;
-  overflow: auto;/*★はみ出したテキスト非表示「…」*/
-}
-
-
-.MuiList-root {
-  width: var(--width) !important;
-}
-
-/*チャットがいっぱい入った箱*/
-.MuiList-root>div:nth-child(1)>div>div {
-    height: auto !important;
-    position:absolute !important;
-    bottom:0px !important; /*下にに引っ付けて並べたい*/
-
-
-}
-
-/*チャットの黒い箱*/
-.MuiList-root>div:nth-child(1)>div>div>div {
-  display: none; /*全チャット非表示 none*/
-    /*★*/
-    height: auto !important;
-    min-height: auto !important;
-    width: var(--width) !important;
-    position: static !important;
-    flex-shrink: 0;
-    margin: 10px;
-    bottom:0px !important;/*下にに引っ付けて並べたい*/
-    /*★*/
-}
-
-.MuiPaper-root {
-  background-color: transparent;
-}
-
-.MuiTypography-body2 {
-  font-size: var(--font-size)
-}
-
-.MuiListItemText-root {
-  overflow: hidden; /*はみ出したテキスト非表示「…」*/
-  height: 100%;
-}
-
-p.MuiTypography-root,
-.MuiTypography-colorTextSecondary {
-  color: var(--font-color);
-  text-shadow: var(--font-color-shadow);
-}
-
-p.MuiTypography-root {
-  display: -webkit-box;/*はみ出したテキスト非表示「…」*/
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: var(--line-clamp);
-}
-
-.MuiTypography-colorPrimary {
-  color: var(--font-color-success);
-  text-shadow: var(--font-color-success-shadow);
-}
-
-.MuiTypography-colorSecondary {
-  color: var(--font-color-fail);
-  text-shadow: var(--font-color-fail-shadow);
-}
-
-/*チャット 名前と時間*/
-.MuiListItemText-primary {
-font-size: var(--font-size)
-  /*display: none;*/
-}
-
-.MuiListItemText-primary,
-.MuiTypography-caption {
-  color: var(--font-color);
-  text-shadow: var(--font-color-shadow);
-}
-
-
-
-.MuiList-root>div:nth-child(1)>div>div>div:nth-last-child(-n+2) {
-    display: block !important;
-}
 /** 雑談用 　左から右**/
 .MuiList-root>div:nth-child(1)>div>div>div::before,
 .MuiListItem-gutters {
@@ -137,12 +39,19 @@ font-size: var(--font-size)
     transform: translateX(0);
   }
 }
+/*★タブの背景色★*/
+.MuiTabs-flexContainer{
+    background:#000;
+}
 /*★選択してないタブの文字の不透明度★*/
 .MuiButtonBase-root:not(.Mui-selected) {
-    opacity: 0.1;
+    opacity: 0.2;
 }
-@import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/main.css");
 
-.MuiList-root>div:nth-child(1)>div>div:nth-last-child(-n+3)>div {
+/*★chat通してるから一遍消す★*/
+.MuiList-root>div:nth-child(1)>div>div:nth-last-child(n)>div {
+  display: none !important;
+}
+.MuiList-root>div:nth-child(1)>div>div:nth-last-child(-n+2)>div {
     display: flex !important;
 }
