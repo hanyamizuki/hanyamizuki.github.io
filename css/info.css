@@ -1,5 +1,7 @@
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/main.css");
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/option_name.css");
+@import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/fix_freeze.css");
+
 
 
 :root {
@@ -25,7 +27,7 @@ body {
 }
 
 /*チャットがいっぱい入った箱*/
-.MuiList-root>div:nth-child(1)>div>div {
+.MuiList-root>div:nth-child(1) {
     height: auto !important;
     position:absolute !important;
     top:0px !important; /*上に引っ付けて並べたい*/
@@ -34,7 +36,7 @@ body {
 }
 
 /*チャットの黒い箱*/
-.MuiList-root>div:nth-child(1)>div>div>div {
+.MuiList-root>div:nth-child(1)>div {
   display: none; /*全チャット非表示 none*/
     /*★*/
     height: auto !important;
@@ -47,8 +49,6 @@ body {
     top:0px !important;
     /*★*/
 }
-
-
 
 p.MuiTypography-root,
 .MuiTypography-colorTextSecondary {
@@ -74,6 +74,7 @@ p.MuiTypography-root {
 
 /*チャット 名前と時間*/
 .MuiListItemText-primary {
+  zoom:130%;
   /*display: none;*/
 }
 .MuiListItemAvatar-alignItemsFlexStart{
@@ -147,4 +148,3 @@ div:nth-last-child(-n+1)>div {
     transform: translateX(0);
   }
 }
-
