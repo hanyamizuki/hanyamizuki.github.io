@@ -1,18 +1,8 @@
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/status.css");
 
-/* 特定のキャラだけ表示（1からスタート） *//*★表示*/
-.MuiButtonBase-root+div+div>div:nth-child(n),
-/*.MuiPaper-rounded+div>div:nth-child(n) {*/
-div[tabindex="0"]>div>div:nth-child(n) {
-  display: flex;
-}
-div[tabindex="0"]>div>div:nth-child(1) {
-  display: flex;    
-}
-
 /* 上下の調整 */
 .MuiButtonBase-root+div+div,
-.MuiPaper-rounded+div {
+div[tabindex="0"]>div {
   top: 0px;
   padding: 15px 0px;/*★調整*/
 }
@@ -30,7 +20,7 @@ div[tabindex="0"]>div>div:nth-child(1) {
 
 /*キャラアイコン>ボタン*//*★追加*/
 .MuiBadge-root>span {
-    zoom:200%;
+    zoom:130%;
 }
 
 /*キャラアイコン>枠>button*//*★追加*/
@@ -43,6 +33,7 @@ div[tabindex="0"]>div>div:nth-child(1) {
     display:flex;
 }
 
-div[tabindex="0"]>div>div:nth-child(1) {
+/* 特定のキャラだけ表示（1からスタート） *//*★表示*/
+div[tabindex="0"]>div>div:nth-child(n) {
   display: flex;    
 }
