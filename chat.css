@@ -1,0 +1,6 @@
+@import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/main.css");
+@import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/fix_freeze.css");
+
+.MuiList-root>div:nth-child(1)>div>div:nth-last-child(-n+3)>div {
+    display: flex !important;
+}
