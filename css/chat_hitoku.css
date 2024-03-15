@@ -12,7 +12,7 @@
 .MuiList-root>div:nth-child(1)>div>div>div::before,
 .MuiListItem-gutters {
   animation-name: fadeLeftToRight ;
-  animation-duration: 50s;
+  animation-duration: 30s;
   animation-fill-mode: forwards;
 }
 
