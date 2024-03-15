@@ -2,11 +2,8 @@
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/option_name.css");
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/fix_freeze.css");
 
-.MuiList-root>div:nth-child(1)>div>div:nth-last-child(-n+3)>div {
+.MuiList-root>div:nth-child(1)>div>div:nth-last-child(-n+20)>div {
     display: flex !important;
-}
-.MuiList-root>div:nth-child(1)>div>div>div:nth-last-child(-n+3) {
-    display: block !important;
 }
 
 :root {
@@ -44,4 +41,9 @@ p.MuiTypography-root {
 /*★選択してないタブの文字の不透明度★*/
 .MuiButtonBase-root:not(.Mui-selected) {
     opacity: 0.2;
+}
+.MuiListItemAvatar-root>div {
+  background: transparent;
+  border-radius: var(--image-radius);
+  display:block;
 }
