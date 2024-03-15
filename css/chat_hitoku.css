@@ -1,0 +1,62 @@
+@import url("https://hanyamizuki.github.io/css/chat.css");
+
+:root {
+  --background-padding: 0;
+  --font-color-fail: rgb(245, 0, 87);
+  --font-color-success: rgb(33, 150, 243);
+  --font-size: 1.3rem;
+  --width:     ;
+}
+
+/** 雑談用 　左から右**/
+.MuiList-root>div:nth-child(1)>div>div>div::before,
+.MuiListItem-gutters {
+  animation-name: fadeLeftToRight ;
+  animation-duration: 50s;
+  animation-fill-mode: forwards;
+}
+
+.MuiList-root>div:nth-child(1)>div>div>div {
+  right: 0px;
+  left: auto!important;
+}
+
+@keyframes fadeLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  5% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+ 100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+/*★タブの背景色★*/
+.MuiTabs-flexContainer{
+    background:#000;
+}
+/*★選択してないタブの文字の不透明度★*/
+.MuiButtonBase-root:not(.Mui-selected) {
+    opacity: 0.2;
+}
+
+/*★chat通してるから一遍消す★*/
+.MuiList-root>div:nth-child(1)>div>div:nth-last-child(n)>div {
+  display: none !important;
+}
+.MuiList-root>div:nth-child(1)>div>div:nth-last-child(-n+3)>div {
+    display: flex !important;
+}
+/*チャット 名前と時間*/
+.MuiListItemText-primary {
+  font-size: var(--font-size);
+  display: block;
+}
