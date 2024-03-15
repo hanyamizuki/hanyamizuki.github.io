@@ -2,8 +2,12 @@
 
 /* 特定のキャラだけ表示（1からスタート） *//*★表示*/
 .MuiButtonBase-root+div+div>div:nth-child(n),
-.MuiPaper-rounded+div>div:nth-child(n) {
+/*.MuiPaper-rounded+div>div:nth-child(n) {*/
+div[tabindex="0"]>div>div:nth-child(n) {
   display: flex;
+}
+div[tabindex="0"]>div>div:nth-child(1) {
+  display: flex;    
 }
 
 /* 上下の調整 */
