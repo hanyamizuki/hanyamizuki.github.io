@@ -21,7 +21,7 @@ body {
 
 
 .MuiList-root {
-  ma x-width: var(--width) !important;
+  max-width: var(--width) !important;
 }
 
 /*チャットがいっぱい入った箱*/
@@ -104,7 +104,7 @@ p.MuiTypography-root {
 /**************
 横並び
 **************/
-.MuiList-root>div:nth-child(1)>div>div {
+.MuiList-root>div:nth-child(1)>div {
   display: flex;
   flex-wrap: wrap;
     margin:0px 10px 0px 0px;
@@ -113,17 +113,16 @@ p.MuiTypography-root {
   align-content: flex-end;
 }
 
-.MuiList-root>div:nth-child(1)>div>div>div {
+.MuiList-root>div:nth-child(1)>div>
+div:nth-last-child(-n+1)>div {
+    display: block !important;
+}
+.MuiList-root>div:nth-child(1)>div>div {
    position: sticky!important;
 }
 
-.MuiList-root>div:nth-child(1)>div>div>
-div:nth-last-child(-n+1) {
-    display: block !important;
-}
-
 /** 情報用 アニメーション　右から左**/
-.MuiList-root>div:nth-child(1)>div>div>div::before,
+.MuiList-root>div:nth-child(1)>div>div::before,
 .MuiListItem-gutters {
   animation-name: fadeRightToLeftToFadeout;
   animation-duration: 90s;
