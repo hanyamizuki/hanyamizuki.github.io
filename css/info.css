@@ -1,0 +1,151 @@
+@import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/main.css");
+@import url("https://yudukiak.github.io/ccfoliaCSS/CSS/chat/option_name.css");
+
+
+:root {
+  --background-padding: 0;
+  --font-color-fail: rgb(245, 0, 87);
+  --font-color-success: rgb(33, 150, 243);
+  --font-size: 1.3rem;
+  --width:     ;
+}
+/**************************
+　各種調整
+**************************/
+/* OBS */
+body {
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0px auto;
+  overflow:overlay; /*はみ出したテキスト非表示「…」*/
+}
+
+
+.MuiList-root {
+  ma x-width: var(--width) !important;
+}
+
+/*チャットがいっぱい入った箱*/
+.MuiList-root>div:nth-child(1)>div>div {
+    height: auto !important;
+    position:absolute !important;
+    top:0px !important; /*上に引っ付けて並べたい*/
+    width:auto !important; /*右に引っ付けて並べたい*/
+    right:0px !important;/*右に引っ付けて並べたい*/
+}
+
+/*チャットの黒い箱*/
+.MuiList-root>div:nth-child(1)>div>div>div {
+  display: none; /*全チャット非表示 none*/
+    /*★*/
+    height: auto !important;
+    min-height: auto !important;
+    min-width: 15px !important; /*情報タブの横幅*/
+    max-width: 100% !important; /*情報タブの横幅*/
+    position: static !important;
+    flex-shrink: 0;
+    margin:  5px;
+    top:0px !important;
+    /*★*/
+}
+
+
+
+p.MuiTypography-root,
+.MuiTypography-colorTextSecondary {
+  color: var(--font-color);
+  text-shadow: var(--font-color-shadow);
+}
+
+p.MuiTypography-root {
+  display:block;/*はみ出したテキスト非表示「…」*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--line-clamp);
+}
+
+.MuiTypography-colorPrimary {
+  color: var(--font-color-success);
+  text-shadow: var(--font-color-success-shadow);
+}
+
+.MuiTypography-colorSecondary {
+  color: var(--font-color-fail);
+  text-shadow: var(--font-color-fail-shadow);
+}
+
+/*チャット 名前と時間*/
+.MuiListItemText-primary {
+  /*display: none;*/
+}
+.MuiListItemAvatar-alignItemsFlexStart{
+    display: none;
+}
+.MuiListItemText-multiline{
+    margin:10px;
+}
+
+.MuiListItemText-primary,
+.MuiTypography-caption {
+  color: var(--font-color);
+  text-shadow: var(--font-color-shadow);
+}
+
+/*情報用テキスト*/
+.MuiList-root>div:nth-child(1)>div>div>div::before {
+  display: block !important;
+  width:60px !important;
+  margin:1px;
+  padding:3px;
+  border: solid var(--border-width) var(--border-color);
+  background-color: #000000;
+  content: "- 情報 -";
+}
+
+
+/**************
+横並び
+**************/
+.MuiList-root>div:nth-child(1)>div>div {
+  display: flex;
+  flex-wrap: wrap;
+    margin:0px 10px 0px 0px;
+    padding:;
+/*  align-content: flex-start;*/
+  align-content: flex-end;
+}
+
+.MuiList-root>div:nth-child(1)>div>div>div {
+   position: sticky!important;
+}
+
+.MuiList-root>div:nth-child(1)>div>div>
+div:nth-last-child(-n+1) {
+    display: block !important;
+}
+
+/** 情報用 アニメーション　右から左**/
+.MuiList-root>div:nth-child(1)>div>div>div::before,
+.MuiListItem-gutters {
+  animation-name: fadeRightToLeftToFadeout;
+  animation-duration: 90s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeRightToLeftToFadeout {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  3% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+ 100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
