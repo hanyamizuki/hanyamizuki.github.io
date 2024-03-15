@@ -19,3 +19,7 @@ min-width: 20px !important;
 .css-1t4fimq .MuiButtonBase-root {
     display:block !important;    /*非表示解除*/
 }
+/*★全体背景色★*/
+div[style*="background-image"]{
+    filter: blur(0px) !important;
+}
