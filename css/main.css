@@ -47,3 +47,7 @@ p.MuiTypography-root {
   border-radius: var(--image-radius);
   display:block;
 }
+
+div[style*="background-image"]{
+    filter: blur(8px) !important;
+}
