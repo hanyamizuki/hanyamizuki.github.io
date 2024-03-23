@@ -49,5 +49,5 @@ p.MuiTypography-root {
 }
 
 div[style*="background-image"]{
-    filter: blur(8px) !important;
+    filter: blur(9px) !important;
 }
